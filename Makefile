@@ -18,3 +18,7 @@ fmt:
 
 c:
 	@terraform console
+
+update:
+	@docker run -it --rm -v $$(pwd):/root/terraform minamijoyo/tfupdate terraform -r /root/terraform
+	@docker run -it --rm -v $$(pwd):/root/terraform minamijoyo/tfupdate provider aws -r /root/terraform

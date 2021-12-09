@@ -54,7 +54,7 @@ resource "aws_cloudfront_origin_access_identity" "example" {}
 
 resource "aws_cloudfront_public_key" "example" {
   name        = "example"
-  encoded_key = file("./keys/${local.service_config.env}/cloudfront_public_key.pem")
+  encoded_key = file("./keys/cloudfront_public_key.pem")
 }
 
 # AWS::CloudFront::KeyGroup は未実装の為、一旦は手動で作成
