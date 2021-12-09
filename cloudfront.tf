@@ -53,9 +53,13 @@ resource "aws_cloudfront_distribution" "example" {
 resource "aws_cloudfront_origin_access_identity" "example" {}
 
 resource "aws_cloudfront_public_key" "example" {
+  comment     = "example public key"
   name        = "example"
   encoded_key = file("./keys/cloudfront_public_key.pem")
 }
 
-# AWS::CloudFront::KeyGroup は未実装の為、一旦は手動で作成
-# https://github.com/hashicorp/terraform-provider-aws/issues/15912
+resource "aws_cloudfront_key_group" "example_key_group" {
+  comment = "example key group"
+  name    = "example-key-group"
+  items   = [aws_cloudfront_public_key.example.id]
+}
