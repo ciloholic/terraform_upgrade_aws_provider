@@ -3,13 +3,13 @@
 | tool          | before version | after version |
 | ---           | ---            | ---           |
 | Terraform     | 1.0.9          | -             |
-| hashicorp/aws | 3.22           | 3.68.0        |
+| hashicorp/aws | 3.22           | 3.69.0        |
 
 # Terraform と hashicorp/aws の更新
 
 ```
-$ make update
 $ rm -f .terraform.lock.hcl
+$ make update
 $ make init
 ```
 
