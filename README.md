@@ -2,8 +2,8 @@
 
 | tool          | before version | after version |
 | ---           | ---            | ---           |
-| Terraform     | 1.0.9          | -             |
-| hashicorp/aws | 3.22           | 3.69.0        |
+| Terraform     | 1.1.2          | -             |
+| hashicorp/aws | 3.22           | 3.70.0        |
 
 # Terraform と hashicorp/aws の更新
 
